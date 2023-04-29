@@ -1,0 +1,31 @@
+<div class="container text-left">
+    <div class="row">
+      <div class="col">
+        <table class="table">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Linea</th>
+                <th scope="col">Modelo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let vehicle of listVehicles">
+                <th scope="row">{{vehicle.id}}</th>
+                <td>{{vehicle.marca}}</td>
+                <td>{{vehicle.linea}}</td>
+                <td>{{vehicle.modelo}}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <ul class="list-group" *ngFor="let resume of listResume">
+                <li class="list-group-item list-group-item-light">Total {{resume.marca}}: {{resume.cantidad}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
